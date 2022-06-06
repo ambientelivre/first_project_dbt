@@ -1,0 +1,10 @@
+
+    
+    create table "erp_oltp"."public"."alunos" ("nome;idade" text)
+  ;
+    -- dbt seed --
+    
+          insert into "erp_oltp"."public"."alunos" ("nome;idade") values
+          (%s),(%s),(%s)
+      
+  
