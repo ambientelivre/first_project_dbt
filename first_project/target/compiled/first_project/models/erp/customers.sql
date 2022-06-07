@@ -1,3 +1,6 @@
+
+
+
 with customers as (
    select * from "erp_oltp"."public"."stg_customers"
 ),

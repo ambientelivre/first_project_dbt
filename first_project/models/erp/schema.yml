@@ -2,10 +2,12 @@ version: 2
 
 models:
   - name: customers
-    description: "customers table"
+    description: '{{ doc("docs_estados") }}'
+
     columns:
       - name: customer_id
-        description: "Primary key of customer"
+        description: Primary key of customer
+
         tests:
           - not_null
           - unique
@@ -13,7 +15,7 @@ models:
         tests:
           - accepted_values:
               values: ['PR', 'SC', 'RS', 'RJ', 'AL', 'BA', 'SP', 'RO', 'MT','GO','DF','PA']
-models:
+
   - name: stg_orders
     columns:
       - name: customer_id

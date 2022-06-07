@@ -1,8 +1,12 @@
+
+  create view "erp_oltp"."public"."customers__dbt_tmp" as (
+    
+
 with customers as (
-   select * from {{ ref('stg_customers')}}
+   select * from "erp_oltp"."public"."stg_customers"
 ),
 orders as (
-   select * from {{ ref('stg_orders')}}
+   select * from "erp_oltp"."public"."stg_orders"
 ),
 customer_orders as (
   select
@@ -27,3 +31,4 @@ from customers
   WHERE customers.customer_id != 63
 )
 select * from final
+  );
